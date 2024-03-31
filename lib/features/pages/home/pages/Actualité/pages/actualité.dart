@@ -1,0 +1,1 @@
+export 'actualité_page.dart';
