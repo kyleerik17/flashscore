@@ -12,7 +12,7 @@ class MatchDetailsPage extends StatefulWidget {
   final String firstValue;
   final String secondValue;
 
-  MatchDetailsPage({
+  const MatchDetailsPage({
     Key? key,
     required this.countryImage,
     required this.countryName,
@@ -29,6 +29,9 @@ class MatchDetailsPage extends StatefulWidget {
 
 class _MatchDetailsPageState extends State<MatchDetailsPage> {
   int selectedIndex = 0;
+  double? selectedButtonY;
+
+  List<double?> buttonYPositions = List.filled(6, null);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +81,7 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
         children: [
           Container(
             color: Colors.grey[200],
-            height: 25.h,
+            height: 20.h,
             child: Column(
               children: [
                 Container(
@@ -87,24 +90,20 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
                     children: [
                       Image.asset(
                         'assets/flags/alg.png',
-                        width: 15
-                            .sp, // Ajustez la taille de l'image selon vos besoins
+                        width: 15.sp,
                         height: 15.sp,
                       ),
-                      SizedBox(width: 4.w), // Espace entre l'image et le texte
+                      SizedBox(width: 4.w),
                       Expanded(
                         child: Text(
                           'Angleterre : premier league 2- Journee 9',
                           style: TextStyle(
                             fontSize: 11.sp,
-                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       IconButton(
-                        onPressed: () {
-                          // Action de l'icône
-                        },
+                        onPressed: () {},
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 15.sp,
@@ -115,13 +114,12 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
                   ),
                 ),
                 Divider(
-                  color: Colors.grey[400],
+                  color: Colors.grey[300],
                   thickness: 1,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Container pour la première équipe
                     SizedBox(
                       width: 35.w,
                       child: Row(
@@ -148,7 +146,6 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
                         ],
                       ),
                     ),
-
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -199,7 +196,6 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
                       ],
                     ),
                     SizedBox(width: 4.w),
-                    // Container pour la deuxième équipe
                     SizedBox(
                       width: 35.w,
                       child: Row(
@@ -232,7 +228,7 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
             ),
           ),
           SizedBox(height: 2.h),
-          // Scroll horizontal pour les boutons de contenu
+      
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -247,17 +243,23 @@ class _MatchDetailsPageState extends State<MatchDetailsPage> {
               ],
             ),
           ),
-
-          // Indicateurs rose
-          Container(
-            color: Colors.pink, // Couleur rose
-            height: 0.5.h, // Hauteur de l'indicateur
-            width: 4.w, // Largeur de l'indicateur
-            margin: EdgeInsets.only(left: 4.w * selectedIndex), // Marge gauche
-          ),
-
           Expanded(
-            child: getContent(selectedIndex),
+            child: Stack(
+              children: [
+                getContent(selectedIndex),
+                if (selectedButtonY != null)
+                  Positioned(
+                    bottom:
+                        MediaQuery.of(context).size.height - selectedButtonY!,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      height: 3.h,
+                      color: Colors.pink,
+                    ),
+                  ),
+              ],
+            ),
           ),
         ],
       ),

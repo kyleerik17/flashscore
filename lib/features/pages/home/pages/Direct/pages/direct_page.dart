@@ -58,10 +58,9 @@ class DirectPage extends StatelessWidget {
           padding: EdgeInsets.all(9.sp),
           child: Column(
             children: [
-              SizedBox(height: 2.0.h),
               Container(
                 padding: EdgeInsets.all(1.w),
-                color: Colors.grey[200],
+                color: Colors.grey[300],
                 width: double.infinity,
                 child: Stack(
                   children: [
@@ -76,14 +75,14 @@ class DirectPage extends StatelessWidget {
                               height: 5.h,
                             ),
                             SizedBox(
-                              width: 8.sp,
+                              width: 6.sp,
                             ),
                             Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                'Jeux-Olympiques-Femmes-Qualifications',
+                                'Jeux Olympiques-Femmes',
                                 style: TextStyle(
-                                  fontSize: 12.sp,
+                                  fontSize: 10.sp,
                                   color: const Color.fromARGB(255, 54, 52, 52),
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -95,15 +94,14 @@ class DirectPage extends StatelessWidget {
                           children: [
                             Gap(5.h),
                             Image.asset(
-                              'assets/flags/caf.jpg', // Remplacez par le chemin de votre image
-                              width: 14.w,
+                              'assets/flags/caf.jpg', 
+                              width: 8.w,
                               height: 2.h,
                             ),
-                            SizedBox(width: 0.w),
                             Text(
                               'AFRIQUE',
                               style: TextStyle(
-                                fontSize: 12.sp,
+                                fontSize: 10.sp,
                                 color: Colors.grey,
                               ),
                             ),
@@ -127,7 +125,7 @@ class DirectPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MatchDetailsPage(
+                      builder: (context) => const MatchDetailsPage(
                         countryImage: 'assets/flags/alg.png',
                         countryName: 'Algerie',
                         secondCountryImage: 'assets/flags/tzn.png',
@@ -156,7 +154,7 @@ class DirectPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MatchDetailsPage(
+                      builder: (context) => const MatchDetailsPage(
                         countryImage: 'assets/flags/alg.png',
                         countryName: 'Maroc',
                         secondCountryImage: 'assets/flags/tzn.png',
@@ -187,14 +185,14 @@ class DirectPage extends StatelessWidget {
                               height: 5.h,
                             ),
                             SizedBox(
-                              width: 8.sp,
+                              width: 6.sp,
                             ),
                             Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'League des champions',
                                 style: TextStyle(
-                                  fontSize: 12.sp,
+                                  fontSize: 10.sp,
                                   color: const Color.fromARGB(255, 54, 52, 52),
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -206,15 +204,14 @@ class DirectPage extends StatelessWidget {
                           children: [
                             Gap(5.h),
                             Image.asset(
-                              'assets/flags/caf.jpg', // Remplacez par le chemin de votre image
-                              width: 14.w,
+                              'assets/flags/caf.jpg', 
+                              width: 8.w,
                               height: 2.h,
                             ),
-                            SizedBox(width: 0.w),
                             Text(
                               'EUROPE',
                               style: TextStyle(
-                                fontSize: 12.sp,
+                                fontSize: 10.sp,
                                 color: Colors.grey,
                               ),
                             ),
@@ -238,7 +235,7 @@ class DirectPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MatchDetailsPage(
+                      builder: (context) => const MatchDetailsPage(
                         countryImage: 'assets/flags/alg.png',
                         countryName: 'Grenade',
                         secondCountryImage: 'assets/flags/tzn.png',
@@ -267,7 +264,7 @@ class DirectPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MatchDetailsPage(
+                      builder: (context) => const MatchDetailsPage(
                         countryImage: 'assets/flags/alg.png',
                         countryName: 'Grenade',
                         secondCountryImage: 'assets/flags/tzn.png',
@@ -294,18 +291,18 @@ class DirectPage extends StatelessWidget {
                           children: [
                             Image.asset(
                               'assets/flags/jo.png',
-                              width: 12.w,
+                              width: 10.w,
                               height: 5.h,
                             ),
                             SizedBox(
-                              width: 8.sp,
+                              width: 10.sp,
                             ),
                             Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'LIGUE 1',
                                 style: TextStyle(
-                                  fontSize: 12.sp,
+                                  fontSize: 9.sp,
                                   color: const Color.fromARGB(255, 54, 52, 52),
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -317,7 +314,7 @@ class DirectPage extends StatelessWidget {
                           children: [
                             Gap(5.h),
                             Image.asset(
-                              'assets/flags/caf.jpg', // Remplacez par le chemin de votre image
+                              'assets/flags/caf.jpg', 
                               width: 14.w,
                               height: 2.h,
                             ),
@@ -349,7 +346,7 @@ class DirectPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MatchDetailsPage(
+                      builder: (context) => const MatchDetailsPage(
                         countryImage: 'assets/flags/alg.png',
                         countryName: 'Marseille',
                         secondCountryImage: 'assets/flags/tzn.png',

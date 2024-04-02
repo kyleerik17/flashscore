@@ -7,6 +7,7 @@ class ClassementPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     Widget _buildHeader(BuildContext context) {
       return Container(
         color: Colors.grey[300],
@@ -20,7 +21,7 @@ class ClassementPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Gap(25.h),
+            const Spacer(), // Ajout du Spacer pour pousser les éléments à droite
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -31,7 +32,7 @@ class ClassementPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 3.h),
+                SizedBox(width: 2.5.h),
                 const Text(
                   'B',
                   style: TextStyle(
@@ -39,7 +40,7 @@ class ClassementPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 3.h),
+                SizedBox(width: 2.h),
                 const Text(
                   'Pts',
                   style: TextStyle(
@@ -54,7 +55,6 @@ class ClassementPage extends StatelessWidget {
       );
     }
 
-    // Fonction pour construire une seule ligne pour une équipe
     Widget _buildTeamRow({
       required String position,
       required String teamName,
@@ -70,10 +70,9 @@ class ClassementPage extends StatelessWidget {
               position,
               textAlign: TextAlign.center,
             ),
-            Gap(0.5.h),
             Image.asset(
               'assets/images/1bet.jpg',
-              width: 6.w,
+              width: 5.w,
               height: 5.w,
             ),
             Gap(1.h),
@@ -84,38 +83,40 @@ class ClassementPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            SizedBox(
-              width: 18.5.h,
-            ),
-            Text(
-              matchesPlayed,
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                fontSize: 10.sp,
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(
-              width: 5.w,
-            ),
-            Text(
-              goalsScored,
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                fontSize: 10.sp,
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(
-              width: 5.w,
-            ),
-            Text(
-              points,
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                fontSize: 10.sp,
-                color: Colors.black,
-              ),
+            const Spacer(),
+            Row(
+              children: [
+                Text(
+                  matchesPlayed,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  width: 5.w,
+                ),
+                Text(
+                  goalsScored,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  width: 5.w,
+                ),
+                Text(
+                  points,
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -127,9 +128,8 @@ class ClassementPage extends StatelessWidget {
             padding: EdgeInsets.all(2.w),
             child: Column(children: [
               _buildHeader(context),
-              // Liste des équipes avec leurs statistiques
               _buildTeamRow(
-                position: ' 1',
+                position: '  1',
                 teamName: 'Real Madrid',
                 matchesPlayed: '38',
                 goalsScored: '106',
@@ -137,238 +137,154 @@ class ClassementPage extends StatelessWidget {
               ),
               _buildTeamRow(
                 position: '  2',
-                teamName: 'Real Madrid',
+                teamName: 'Leganes',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
                 position: '  3',
-                teamName: 'Real Madrid',
+                teamName: 'Real Sociedad',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '  4',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '  5',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '  6',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '  7',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '  8',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '  9',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '10',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '11',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '12',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '13',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '14',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '15',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '16',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '17',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '18',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '19',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '20',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '21',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '22',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',
               ),
               _buildTeamRow(
-                position: '23',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '24',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '25',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '26',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '27',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '28',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '29',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '30',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '31',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '32',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '33',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '34',
-                teamName: 'Real Madrid',
-                matchesPlayed: '38',
-                goalsScored: '106',
-                points: '93',
-              ),
-              _buildTeamRow(
-                position: '35',
-                teamName: 'Real Madrid',
+                position: '  3',
+                teamName: 'Barcelone',
                 matchesPlayed: '38',
                 goalsScored: '106',
                 points: '93',

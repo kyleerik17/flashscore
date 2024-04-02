@@ -18,7 +18,7 @@ class FavorisBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const AllPage()),
                 );
@@ -40,7 +40,7 @@ class FavorisBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const DirectPage()),
                 );
@@ -58,7 +58,7 @@ class FavorisBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const FavorisPage(),
@@ -86,7 +86,7 @@ class FavorisBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ActualitePage(),
@@ -100,11 +100,11 @@ class FavorisBottomNavigationBarPage extends StatelessWidget {
                   Image.asset('assets/images/ac.png',
                       width: 9.w,
                       height: 9.w,
-                      color: Colors.black), // Icône en rouge
+                      color: Colors.black), // Icône en noir
                   SizedBox(height: 1.h),
                   const Text(
                     'Actualité',
-                    style: TextStyle(color: Colors.black), // Texte en rouge
+                    style: TextStyle(color: Colors.black), // Texte en noir
                   ),
                 ],
               ),
@@ -114,7 +114,7 @@ class FavorisBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ClassementPage(),

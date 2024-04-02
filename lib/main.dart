@@ -9,7 +9,7 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget { 
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -20,9 +20,8 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             textTheme: const TextTheme(
               bodyText2: TextStyle(
-                  fontFamily: 'AftaSansThin-RegularMerriweather-BoldItalic.ttf',
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic),
+                fontFamily: 'AftaSansThin-RegularMerriweather-BoldItalic.ttf',
+              ),
             ),
           ),
           home: const SplashscreenPage(),

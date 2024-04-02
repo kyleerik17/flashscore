@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
-import 'detail_match.dart'; 
+import 'detail_match.dart';
 
 class Competition {
   final String country;
@@ -23,13 +23,14 @@ class CompetitionListe extends StatelessWidget {
       children: competitions.map((competition) {
         return InkWell(
           onTap: () {
-            
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => CompetitionDetailsPage(
+                builder: (context) => CompetitionDetailPage(
                   country: competition.country,
-                  league: competition.league, competition: competition,
+                  league: competition.league,
+                  competition: competition,
+                  flagPath: '',
                 ),
               ),
             );
@@ -49,14 +50,14 @@ class CompetitionListe extends StatelessWidget {
                       Text(
                         competition.country,
                         style: TextStyle(
-                          fontSize: 12.sp,
+                          fontSize: 10.sp,
                           color: Colors.grey,
                         ),
                       ),
                       Text(
                         competition.league,
                         style: TextStyle(
-                          fontSize: 14.sp,
+                          fontSize: 12.sp,
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),

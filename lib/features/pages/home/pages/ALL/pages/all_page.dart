@@ -1,8 +1,9 @@
+import 'package:flashscore/features/pages/home/pages/ALL/widgets/competitionList.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:sizer/sizer.dart';
-import '../../Classement/widgets/competitionList.dart';
+
 import '../widgets/bottomnavigationbar.dart';
 
 class AllPage extends StatelessWidget {
@@ -61,14 +62,13 @@ class AllPage extends StatelessWidget {
       bottomNavigationBar: const AllBottomNavigationBarPage(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+          padding: EdgeInsets.all(2.w),
           child: Container(
             color: Colors.white,
             padding: EdgeInsets.all(2.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 2.0.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: List.generate(
@@ -86,8 +86,10 @@ class AllPage extends StatelessWidget {
                                 ? 'AJD'
                                 : DateFormat.E('fr').format(currentDay),
                             style: TextStyle(
-                              fontSize: 15.sp,
-                              color: isToday ? Colors.red : Colors.black,
+                              fontSize: 13.sp,
+                              color: isToday
+                                  ? const Color.fromARGB(255, 255, 21, 5)
+                                  : Colors.black,
                             ),
                           ),
                           Stack(
@@ -95,8 +97,10 @@ class AllPage extends StatelessWidget {
                               Text(
                                 formattedDate,
                                 style: TextStyle(
-                                  fontSize: 12.sp,
-                                  color: isToday ? Colors.red : Colors.grey,
+                                  fontSize: 8.sp,
+                                  color: isToday
+                                      ? const Color.fromARGB(255, 255, 21, 5)
+                                      : Colors.grey,
                                 ),
                               ),
                             ],
@@ -170,7 +174,7 @@ class AllPage extends StatelessWidget {
                   padding: EdgeInsets.all(1.w),
                   color: Colors.yellow[100],
                   width: double.infinity,
-                  height: 4.h,
+                  height: 3.h,
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -200,7 +204,7 @@ class AllPage extends StatelessWidget {
                   padding: EdgeInsets.all(1.w),
                   color: Colors.grey[100],
                   width: double.infinity,
-                  height: 4.h,
+                  height: 3.h,
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(

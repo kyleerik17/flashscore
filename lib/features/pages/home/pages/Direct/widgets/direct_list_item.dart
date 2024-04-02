@@ -53,8 +53,8 @@ class _DirectListItemState extends State<DirectListItem> {
                 children: [
                   Image.asset(
                     widget.countryImage,
-                    height: 20.sp,
-                    width: 20.sp,
+                    height: 16.sp,
+                    width: 16.sp,
                   ),
                   SizedBox(width: 8.sp),
                   Text(widget.countryName),
@@ -65,8 +65,8 @@ class _DirectListItemState extends State<DirectListItem> {
                 children: [
                   Image.asset(
                     widget.secondCountryImage,
-                    height: 20.sp,
-                    width: 20.sp,
+                    height: 18.sp,
+                    width: 18.sp,
                   ),
                   SizedBox(width: 8.sp),
                   Text(widget.secondCountryName),
@@ -82,7 +82,7 @@ class _DirectListItemState extends State<DirectListItem> {
                 Text(
                   widget.firstValue,
                   style: TextStyle(
-                    fontSize: 13.sp,
+                    fontSize: 10.sp,
                     color: Colors.pink,
                   ),
                 ),
@@ -93,7 +93,7 @@ class _DirectListItemState extends State<DirectListItem> {
                         child: Text(
                           widget.rightText,
                           style: TextStyle(
-                            fontSize: 13.sp,
+                            fontSize: 10.sp,
                             color: Colors.pink,
                           ),
                         ),
@@ -104,7 +104,7 @@ class _DirectListItemState extends State<DirectListItem> {
                 Text(
                   widget.secondValue,
                   style: TextStyle(
-                    fontSize: 13.sp,
+                    fontSize: 10.sp,
                     color: Colors.pink,
                   ),
                 ),

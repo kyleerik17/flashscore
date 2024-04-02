@@ -18,7 +18,7 @@ class ActualiteBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const AllPage()),
                 );
@@ -40,7 +40,7 @@ class ActualiteBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const DirectPage()),
                 );
@@ -58,7 +58,7 @@ class ActualiteBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const FavorisPage()),
                 );
@@ -76,7 +76,7 @@ class ActualiteBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ActualitePage(),
@@ -104,7 +104,7 @@ class ActualiteBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ClassementPage(),

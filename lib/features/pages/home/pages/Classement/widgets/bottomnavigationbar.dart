@@ -18,7 +18,7 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ActualitePage(),
@@ -32,11 +32,11 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
                   Image.asset('assets/images/st.png',
                       width: 9.w,
                       height: 9.w,
-                      color: Colors.black), // Icône en rouge
+                      color: Colors.black), // Icône en noir
                   SizedBox(height: 1.h),
                   const Text(
                     'Tous',
-                    style: TextStyle(color: Colors.black), // Texte en rouge
+                    style: TextStyle(color: Colors.black), // Texte en noir
                   ),
                 ],
               ),
@@ -46,7 +46,7 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const DirectPage()),
                 );
@@ -64,7 +64,7 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const FavorisPage()),
                 );
@@ -82,7 +82,7 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
           BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ActualitePage(),
@@ -96,12 +96,12 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
                   Image.asset('assets/images/ac.png',
                       width: 9.w,
                       height: 9.w,
-                      color: Colors.black), // Icône en rouge
+                      color: Colors.black), // Icône en noir
                   SizedBox(height: 1.h),
                   const Text(
                     'Actualité',
                     style: TextStyle(color: Colors.black
-                    ), // Texte en rouge
+                    ), // Texte en noir
                   ),
                 ],
               ),
@@ -111,7 +111,7 @@ class ClassementBottomNavigationBarPage extends StatelessWidget {
            BottomNavigationBarItem(
             icon: GestureDetector(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ActualitePage(),
