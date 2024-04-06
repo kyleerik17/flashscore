@@ -1,3 +1,4 @@
+import 'package:flashscore/features/pages/home/pages/ALL/widgets/match_details.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
@@ -177,40 +178,78 @@ class _CompetitionDetailPageState extends State<CompetitionDetailPage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              Image.asset(
-                                'assets/flags/caf.jpg',
-                                width: 5.w,
-                                height: 5.w,
-                              ),
-                              SizedBox(width: 2.0.w),
-                              Text(
-                                'Bayern Munich',
-                                style: TextStyle(
-                                  fontSize: 9.0.sp,
-                                  color: Colors.black,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MatchDetailsPage(
+                                    countryName: 'Bayern Munich',
+                                    secondCountryName: 'Burussia Dortmund',
+                                    countryImage: '',
+                                    secondCountryImage: '',
+                                    rightText: '',
+                                    firstValue: '',
+                                    secondValue: '',
+                                    // Ajoutez d'autres données du match si nécessaire
+                                  ),
                                 ),
-                              ),
-                            ],
+                              );
+                            },
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/flags/caf.jpg',
+                                  width: 5.w,
+                                  height: 5.w,
+                                ),
+                                SizedBox(width: 2.0.w),
+                                Text(
+                                  'Bayern Munich',
+                                  style: TextStyle(
+                                    fontSize: 9.0.sp,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(height: 1.0.h),
-                          Row(
-                            children: [
-                              Image.asset(
-                                'assets/flags/caf.jpg',
-                                width: 5.0.w,
-                                height: 5.0.w,
-                              ),
-                              SizedBox(width: 2.0.w),
-                              Text(
-                                ' Burussia Dortmund',
-                                style: TextStyle(
-                                  fontSize: 9.sp,
-                                  color: Colors.black,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const MatchDetailsPage(
+                                    countryName: 'Burussia Dortmund',
+                                    secondCountryName: 'Bayern Munich',
+                                    countryImage: '',
+                                    secondCountryImage: '',
+                                    rightText: '',
+                                    firstValue: '',
+                                    secondValue: '',
+                                    // Ajoutez d'autres données du match si nécessaire
+                                  ),
                                 ),
-                              ),
-                            ],
+                              );
+                            },
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  'assets/flags/caf.jpg',
+                                  width: 5.0.w,
+                                  height: 5.0.w,
+                                ),
+                                SizedBox(width: 2.0.w),
+                                Text(
+                                  'Burussia Dortmund',
+                                  style: TextStyle(
+                                    fontSize: 9.sp,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),

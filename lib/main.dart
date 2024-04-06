@@ -1,5 +1,3 @@
-import 'package:flashscore/features/pages/home/pages/ALL/pages/all.dart';
-import 'package:flashscore/features/pages/home/pages/Direct/pages/direct_page.dart';
 import 'package:flashscore/features/pages/home/pages/Splashscreen/pages/splashscreen_page.dart';
 
 import 'package:flutter/material.dart';
@@ -24,7 +22,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          home: const SplashscreenPage(),
+          home: SplashscreenPage(),
         );
       },
     );
